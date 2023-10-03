@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    
+  }
+.login-container {
+    background-image: linear-gradient(to bottom, dodgerblue 5%, black);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+ }
+ 
+button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.control{
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+        width: 100%;
+    height: 7.7vh;
+    padding: 0 1vw;
+    background: #edeaf7;
+    color: #5a4f79;
+    font-family: inherit;
+    font-size: 1.2vw;
+    transition: 0.4s;
+}
+.login-card {
+    place-items: center;
+    width: 28vw;
+    height: 85vh;
+    padding:3vh 1.5vw 2vh;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+.login-card > .title > h2 {
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+.login-card > .title > h3 {
+    color: #837f90;
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+.login-form {
+    width: 100%;
+    margin: 0;
+    display:grid;
+    gap: 2.5vh;
+    padding-bottom: 4vh;
+}
+.login-form > .submit button.control {
+    cursor: pointer;
+    width: 100%;
+    height: 8vh;
+
+    align-items: center;
+    justify-content: center;
+    background: #0d34a1;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1.3vw;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.375s;
+}
+.login-card img{
+    height: 24vh;
+}

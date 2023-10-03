@@ -1,11 +1,11 @@
 <div id="top"></div>
 <div align="center">
 <img alt="react" src="https://github.com/ThoratNeha/daily-report/assets/112370237/0a9d55b3-89ad-46dd-a34d-b7176dfa8a41.png"width="120px">
-<h2>daily-report</h2>
+<h2> SAS Daily-Report</h2>
   <p>Best Daily Task Report Software for Team</p>
 </div>
 
-## Daily-Report
+## SAS Daily-Report
 Daily report enables the team manager to have an overview how the team’s project is progressing in terms of each team member’s individual tasks without having to talk to each one on a daily basis.
 
 ## 📚 Getting Started

@@ -49,3 +49,15 @@ cd server
    ```bash
    npm install
    ```
+## 👩🏽‍💻 Contributing
+
+- Contributions make the open source community such an amazing place to learn, inspire, and create.
+- Any contributions you make are greatly appreciated.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## 🛡️ License
+
+SAS Daily-Report is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<p align="right">(<a href="#top">back to top</a>)</p>

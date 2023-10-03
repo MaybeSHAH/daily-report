@@ -21,7 +21,7 @@ Before installation, please make sure you have already installed the following t
 
 ### 🛠️ Installation
 
-1. [Fork](https://github.com/Dun-sin/Whisper/fork) the project. Click on the fork icon in the top right to get started
+1. [Fork](https://github.com/MaybeSHAH/daily-report.git) the project. Click on the fork icon in the top right to get started
 2. Clone the project, you can use the following command:
 
    ```bash

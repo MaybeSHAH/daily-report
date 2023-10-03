@@ -2,7 +2,9 @@
 const express = require('express');
 const cors = require("cors");
 const connection = require('./connection');
+const login = require("./models/login")
 const indexRouter = require("./router/indexRouter");
+const bodyParser = require('body-parser');
 
 
 const app = express();
@@ -12,6 +14,8 @@ app.use(cors({
     origin: '*'
   }));
   
+
+app.use(bodyParser.json());
 
 app.use(express.json());
 app.use("/api", indexRouter);

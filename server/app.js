@@ -2,7 +2,10 @@
 const express = require('express');
 const cors = require("cors");
 const connection = require('./connection');
-// const indexRouter = require("./routers/indexRouter");
+const login = require("./models/login")
+const indexRouter = require("./router/indexRouter");
+const bodyParser = require('body-parser');
+
 
 const app = express();
 const PORT = 3000;
@@ -12,7 +15,10 @@ app.use(cors({
   }));
   
 
+app.use(bodyParser.json());
+
 app.use(express.json());
+app.use("/api", indexRouter);
 
 app.listen(PORT, (error) =>{
 	if(!error)

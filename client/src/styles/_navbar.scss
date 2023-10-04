@@ -1,0 +1,31 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1482ab;
+    background-color: #557A46;
+    padding: 0;
+    height: calc(10vh);
+
+    .navbar-brand{
+        img{
+            height: calc(4vw);
+            padding-left: 10px;
+            width: calc(6vw);
+        }
+        p{
+            font-size: 11px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    }
+    .head-title{
+        font-size: calc(2.3vw);
+        font-weight: 700;
+        color: white;
+    }
+    .user{
+        color: white;
+        font-size: 3.5vw;
+    }
+}

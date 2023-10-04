@@ -1,8 +1,11 @@
 import { combineReducers } from "redux";
+import { RESET } from "../constant/constant";
 import Auth from "./auth";
+import Tab from "./tabsclick";
 
 const appReducer = combineReducers({
-Auth
+Auth,
+Tab
 })
 
 const rootReducer = (state, action) => {

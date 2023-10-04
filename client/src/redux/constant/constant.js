@@ -1,1 +1,3 @@
 export const USER_DETAILS_UPDATED = "USER_DETAILS_UPDATED" 
+export const TAB_CLICKED = "TAB_CLICKED" 
+export const RESET = "RESET"

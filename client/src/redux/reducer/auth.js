@@ -1,4 +1,4 @@
-import { USER_DETAILS_UPDATED } from "../constant/constant";
+import { USER_DETAILS_UPDATED, RESET} from "../constant/constant";
 
 const initialState = {
     username: null,
@@ -10,6 +10,8 @@ const Auth = (state = initialState, { type, username, password, userType }) => {
     switch (type) {
         case USER_DETAILS_UPDATED:
             return { ...state, username, password, userType }
+        case RESET:
+            return {...initialState, username:state.username, password:state.password, userType:state.userType}
         default:
             return state
     }

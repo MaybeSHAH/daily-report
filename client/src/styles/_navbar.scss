@@ -4,6 +4,8 @@
     align-items: center;
     color: #1482ab;
     background-color: #557A46;
+    background-color: rgba(62, 62, 63, 0.7);
+    
     padding: 0;
     height: calc(10vh);
 
@@ -25,7 +27,7 @@
         color: white;
     }
     .user{
-        color: white;
+        color: rgb(255, 255, 255);
         font-size: 3.5vw;
     }
 }

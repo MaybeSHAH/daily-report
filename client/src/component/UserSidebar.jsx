@@ -25,7 +25,6 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
 
     const handleLogoutSidebar = () => {
         updateAuth(null, null, null)
-        clickTab(null)
     }
 
 
@@ -50,11 +49,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
     useLocationChange((location, prevLocation) => {
         console.log('changed from', prevLocation && prevLocation.pathname, 'to', location && location.pathname)
         if ((prevLocation && prevLocation.pathname) != (location && location.pathname)) {
-            console.log("Route Changed")
-            if (clicked) {
-                console.log("Route Changed and tab cliked")
                 updateReset()
-            }
         }
     })
 
@@ -73,7 +68,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                     <div>
 
                         <li>
-                            <NavLink to={"/dashboard"} onClick={()=>clickTab(true)}>
+                            <NavLink to={"/dashboard"}>
                                 <a>
                                     <i className="FaHome single" ><FaHome /></i>
                                     <span className="link_name single">Dashboard</span>
@@ -84,7 +79,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/entry"} onClick={()=>clickTab(true)}>
+                            <NavLink to={"/entry"}>
                                 <a>
                                     <i className="FaHome single" ><SiGoogleforms /></i>
                                     <span className="link_name single">Entry</span>
@@ -95,7 +90,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/history"} onClick={()=>clickTab(true)}>
+                            <NavLink to={"/history"}>
                                 <a>
                                     <i className="FaHome single" ><FaHistory /></i>
                                     <span className="link_name single">History</span>
@@ -106,7 +101,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/in-progress"} onClick={()=>clickTab(true)}>
+                            <NavLink to={"/in-progress"}>
                                 <a>
                                     <i className="FaHome single" ><SiProgress /></i>
                                     <span className="link_name single">In-Progress</span>
@@ -117,7 +112,7 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to={"/issues"} onClick={()=>clickTab(true)}>
+                            <NavLink to={"/issues"}>
                                 <a>
                                     <i className="FaHome single" ><BiSolidErrorCircle /></i>
                                     <span className="link_name single">Issues</span>

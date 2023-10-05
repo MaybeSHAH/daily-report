@@ -1,5 +1,5 @@
 import React from 'react'
-import logosas from "../assets/sas-dark.png";
+import logosas from "../assets/sas.png";
 import { BiSolidUserCircle } from "react-icons/bi";
 
 const Navbar = () => {

@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require("cors");
 const connection = require('./connection');
-const login = require("./models/login")
+const login = require("./models/user")
 const indexRouter = require("./router/indexRouter");
 const bodyParser = require('body-parser');
 

@@ -7,6 +7,8 @@ import Footer from "../component/Footer"
 import useWindowDimensions from '../component/Responsive';
 import UserEntryForm from './UserEntryForm';
 import background from "../assets/z.jpg"
+import axios from 'axios';
+
 
 const UserDashboard = () => {
   const [widthSidebar, setwidthSidebar] = useState()

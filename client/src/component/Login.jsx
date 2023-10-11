@@ -17,7 +17,7 @@ const Login = ({updateAuth}) => {
                     password: password.current.value
                 });
             console.log(res.data)
-            updateAuth(username.current.value,password.current.value,res.data.type)
+            updateAuth(res.data)
         } catch (error) {
             // Handle errors
             console.log("error", error)

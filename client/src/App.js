@@ -10,8 +10,8 @@ const App = ({username, password, userType}) => {
 
   return (
     <>
-      {/* {username && password? userType === "user"? <UserDashboard/>:<AdminDashboard/>:<Login/>} */}
-      <UserDashboard/>
+      {username && password? userType === "user"? <UserDashboard/>:<AdminDashboard/>:<Login/>}
+      {/* <UserDashboard/> */}
     </>
   )
 }

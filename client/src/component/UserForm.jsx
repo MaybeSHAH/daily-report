@@ -6,16 +6,15 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 
-const UserForm = ({e_id}) => {
-
-    console.log(e_id)
+const UserForm = ({ e_id }) => {
+    const date = new Date()
     const [inputFields, setInputFields] = useState([
-        { proj_name: '', task_name: '', assign_date: '', target_date: '', description: '', status: '' }
+        { proj_name: '', task_name: '', assign_date: `${date.toLocaleDateString()}, 10:00:00 AM`, target_date: `${date.toLocaleDateString()}, 05:00:00 PM`, description: '', status: '' }
     ])
 
 
     const addForm = () => {
-        let newForm = { proj_name: '', task_name: '', assign_date: '', target_date: '', description: '', status: '' }
+        let newForm = { proj_name: '', task_name: '', assign_date: `${date.toLocaleDateString()}, 10:00:00 AM`, target_date: `${date.toLocaleDateString()}, 05:00:00 PM`, description: '', status: '' }
         setInputFields([...inputFields, newForm])
     }
 
@@ -39,14 +38,20 @@ const UserForm = ({e_id}) => {
     console.log("inputfields data", inputFields)
 
     const formDataSubmit = async () => {
-        inputFields && inputFields.map((obj)=>{
+        const formData = inputFields.map(object => ({ ...object }))
+        formData && formData.map((obj) => {
             obj.e_id = e_id
+            obj.assign_date = new Date(obj.assign_date)
+            obj.target_date = new Date(obj.target_date)
+            obj.completion_date = null
+
         })
+        console.log(formData)
         try {
-            const res = await axios.post(`http://192.168.0.220:3000/api/userEntry `,
-                
-                    inputFields
-                );
+            const res = await axios.post(`http://192.168.0.220:3000/api/userEntry`,
+
+                formData
+            );
             console.log(res.data)
         } catch (error) {
             // Handle errors
@@ -91,7 +96,7 @@ const UserForm = ({e_id}) => {
                                     fullWidth
                                     name={`assign_date`}
                                     id="standard-basic"
-                                    label="Assign Date (DD/MM/YYYY 00:00:00 AM/PM)"
+                                    label="Assign Date (MM/DD/YYYY, 00:00:00 AM/PM)"
                                     variant="standard"
                                     value={input.assign_date}
                                     onChange={event => handleFormChange(index1, event)}
@@ -100,7 +105,7 @@ const UserForm = ({e_id}) => {
                                     fullWidth
                                     name={`target_date`}
                                     id="standard-basic"
-                                    label="Target Date (DD/MM/YYYY 00:00:00 AM/PM)"
+                                    label="Target Date (MM/DD/YYYY, 00:00:00 AM/PM)"
                                     variant="standard"
                                     value={input.target_date}
                                     onChange={event => handleFormChange(index1, event)}
@@ -151,7 +156,7 @@ const UserForm = ({e_id}) => {
                                             type='submit'
                                             variant="contained"
                                             style={{ fontSize: "1.2vw", padding: "0 1vw" }}
-                                            onClick={()=>formDataSubmit()}
+                                            onClick={() => formDataSubmit()}
                                         >
                                             Submit
                                         </Button>
@@ -171,7 +176,7 @@ const UserForm = ({e_id}) => {
 
 const withConnect = connect(
     state => ({
-        e_id:state.Auth.e_id
+        e_id: state.Auth.e_id
     }),
     {},
 );

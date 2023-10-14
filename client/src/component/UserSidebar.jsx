@@ -9,6 +9,7 @@ import { BiLogOut } from "react-icons/bi"
 import { SiProgress, SiGoogleforms } from "react-icons/si"
 import { BiSolidErrorCircle } from "react-icons/bi"
 import { FaHistory } from "react-icons/fa"
+import {IoCheckmarkDoneSharp} from "react-icons/io5"
 import * as authActions from "../redux/action/auth"
 import * as resetActions from "../redux/action/reset"
 import * as tabsclicked from "../redux/action/tabsclick"
@@ -105,6 +106,17 @@ const UserSidebar = ({ setwidthSidebar, updateAuth, updateReset, clicked, clickT
                                 <a>
                                     <i className="FaHome single" ><SiProgress /></i>
                                     <span className="link_name single">In-Progress</span>
+                                </a>
+                                <ul className="sub-menu blank">
+                                    <li><a className="link_name single" href="#">Home</a></li>
+                                </ul>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={"/check-status"}>
+                                <a>
+                                    <i className="FaHome single" ><IoCheckmarkDoneSharp /></i>
+                                    <span className="link_name single">Check Status</span>
                                 </a>
                                 <ul className="sub-menu blank">
                                     <li><a className="link_name single" href="#">Home</a></li>

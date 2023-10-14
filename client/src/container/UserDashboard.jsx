@@ -8,6 +8,8 @@ import useWindowDimensions from '../component/Responsive';
 import UserEntryForm from './UserEntryForm';
 import background from "../assets/z.jpg"
 import axios from 'axios';
+import UserHistory from './UserHistory';
+import UserInProgress from './UserInProgress';
 
 
 const UserDashboard = () => {
@@ -29,6 +31,8 @@ const UserDashboard = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route path='/home' element={<Home />} />
                 <Route path='/entry' element={<UserEntryForm />} />
+                <Route path='/history' element={<UserHistory />} />
+                <Route path='/in-progress' element={<UserInProgress/>} />
 
 
 
